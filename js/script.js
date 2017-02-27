@@ -1,7 +1,7 @@
-var swedishFish = require("./swedishFish");
-var dataCleaning = require("./dataCleaning");
-var postRate = swedishFish.postRate;
-var prepareChartData = dataCleaning.prepareChartData;
+// var swedishFish = require("./swedishFish");
+// var dataCleaning = require("./dataCleaning");
+// var postRate = swedishFish.postRate;
+// var prepareChartData = dataCleaning.prepareChartData;
 
 // var bardata = [20, 30, 40, 15];
 // Prepare Data to plot

@@ -24,6 +24,6 @@ function prepareChartData(data, binSize){
   return bins;
 }
 
-module.exports = {
-  prepareChartData: prepareChartData
-}
+// module.exports = {
+//   prepareChartData: prepareChartData
+// }

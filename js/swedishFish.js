@@ -1,14 +1,14 @@
-var simulation = require('./simulation');
-var likelihood = simulation.likelihood,
-  Math = simulation.Math,
-  getPosterior = simulation.getPosterior,
-  getFilterScore = simulation.getFilterScore,
-  filteringOut = simulation.filteringOut;
+// var simulation = require('./simulation');
+// var likelihood = simulation.likelihood,
+//   Math = simulation.Math,
+//   getPosterior = simulation.getPosterior,
+//   getFilterScore = simulation.getFilterScore,
+//   filteringOut = simulation.filteringOut;
 
 
 // start simulation
-var dataset = [1,1,0,1,1,1,0,1,0,0];
-var nDraws = 10000;
+var dataset = [1,1,0,1,1,1,0,1,0,0]; // later on we should allow user to upload its own dataset
+var nDraws = 10000; 
 var n = dataset.length;
 // Simulate prior with an uniform distribution
 var priors = likelihood(nDraws, function(){
@@ -42,6 +42,6 @@ var postRate = filteringOut(filterScore, priors, posteriors, function(filterScor
   }
 });
 
-module.exports = {
-  postRate: postRate
-}
+// module.exports = {
+//   postRate: postRate
+// }

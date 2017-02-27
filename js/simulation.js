@@ -50,10 +50,10 @@ function filteringOut(filterScore, priors, posteriors, cb){
   return postRate;
 }
 
-module.exports = {
-  likelihood: likelihood,
-  Math: Math,
-  getPosterior: getPosterior,
-  filteringOut: filteringOut,
-  getFilterScore: getFilterScore
-};
+// module.exports = {
+//   likelihood: likelihood,
+//   Math: Math,
+//   getPosterior: getPosterior,
+//   filteringOut: filteringOut,
+//   getFilterScore: getFilterScore
+// };
