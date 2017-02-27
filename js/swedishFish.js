@@ -1,12 +1,10 @@
 var simulation = require('./simulation');
-var dataCleaning = require('./dataCleaning');
 var likelihood = simulation.likelihood,
   Math = simulation.Math,
   getPosterior = simulation.getPosterior,
   getFilterScore = simulation.getFilterScore,
   filteringOut = simulation.filteringOut;
 
-var prepareChartData = dataCleaning.prepareChartData;
 
 // start simulation
 var dataset = [1,1,0,1,1,1,0,1,0,0];
@@ -44,5 +42,6 @@ var postRate = filteringOut(filterScore, priors, posteriors, function(filterScor
   }
 });
 
-// Prepare Data to plot
-var chartData = prepareChartData(postRate, 20); // we should allow user to choose bin from browser
+module.exports = {
+  postRate: postRate
+}
