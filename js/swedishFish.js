@@ -8,7 +8,7 @@
 
 // start simulation
 var dataset = [1,1,0,1,1,1,0,1,0,0]; // later on we should allow user to upload its own dataset
-var nDraws = 10000; 
+var nDraws = 10000;
 var n = dataset.length;
 // Simulate prior with an uniform distribution
 var priors = likelihood(nDraws, function(){
