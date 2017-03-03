@@ -3,39 +3,48 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Normal Plot</title>
+    <title>Bayesian Inference exercise</title>
     <meta name="description" content="">
-    <script type="text/javascript" src=""></script>
-    <style type="text/css">
-    body {
-        font: 10px sans-serif;
-    }
-    .axis path,
-    .axis line {
-        fill: none;
-        stroke: #000;
-        shape-rendering: crispEdges;
-    }
-    /*.x.axis path {
-        display: none;
-    }*/
-    .line {
-        fill: none;
-        stroke: steelblue;
-        stroke-width: 1.5px;
-    }
-    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <style type="stylesheet" href="css/styles.css"></style>
 </head>
 
 <body>
-  <div class="container">
-    <h2>D3 Graphic</h2>
-    <section id="chart"></div>
-  </div>
-  <div class="control">
-    <input type="text" id="nDraws" value="10000">
-    <div id="refresh" class="btn">Refresh</div>
-  </div>
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <div class="mdl-grid portfolio-max-width portfolio-contact">
+        <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Swedish Fish A/B Testing - D3 Graphic</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <p>Posterior Distribution</p>
+            <p><div id="chart"></div></p>
+            <form action="#" class="">
+                 <div class="mdl-textfield mdl-js-textfield">
+                   <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="nDraws" value="10000">
+                   <label class="mdl-textfield__label" for="nDraws">Number of draws...</label>
+                   <span class="mdl-textfield__error">Input is not a number!</span>
+                 </div>
+                 <p>
+                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                     <input class="mdl-textfield__input" type="text" rows="5" id="priorData" value = "[1,1,0,1,1,1,0,1,0,0]">
+                     <label class="mdl-textfield__label" for="priorData">Enter Prior sample</label>
+                   </div>
+                </p>
+                 <p>
+                   <div class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" id="refresh">
+                     Refresh
+                   </div>
+                 </p>
+             </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
   <script
     src="https://code.jquery.com/jquery-3.1.1.slim.js"
     integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA="

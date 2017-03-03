@@ -17,8 +17,8 @@ var chartData = prepareChartData(postRate, binsCount);
 
 var margin = {top: 30, right: 30, bottom: 40, left: 50};
 
-var height = 400 - margin.top - margin.bottom,
-  width = 900 - margin.right - margin.left,
+var height = 300 - margin.top - margin.bottom,
+  width = 600 - margin.right - margin.left,
   barWidth = width/binsCount,
   barOffset = 2;
 
@@ -52,10 +52,11 @@ buildChart(chartData, myChart, settings);
 
 
 $("#refresh").click(function(){
-	console.log("refresh data");
 	nDraws = $('#nDraws').val();
+  dataset = JSON.parse($('#priorData').val());
+
 	if(nDraws > 100000){
-		console.log("too many sample")
+		console.log("too many sample");
 	} else {
 		d3.selectAll('#chart rect').data(postRate).exit().remove();
 	  postRate = getSimulation(dataset, nDraws);
