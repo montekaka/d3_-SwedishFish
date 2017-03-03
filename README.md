@@ -4,4 +4,4 @@ A Javascript implementation for the [Introduction to Bayesian Data Analysis](htt
 
 ![alt tag](https://s3.amazonaws.com/JokeKing/Images/demo.png)
 
-[DEMO](https://github.com/montekaka/d3_-SwedishFish)
+[DEMO](https://montekaka.github.io/d3_-SwedishFish/)
